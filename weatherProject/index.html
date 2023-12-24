@@ -7,7 +7,93 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="wrapper">
+
+        <h1>WEATHER APP</h1>
+        <div id="inner-wrapper">
+
+            <!-- switching container -->
+            <div class="switching-tab-container">
+                <div class="weather-tab current-tab">your weather</div>
+                <div class="search-tab">search weather</div>
+            </div>
     
+            <!-- permission container -->
+            <div class="grant-permission-container">
+                <img src="/assests/location.png" alt="location-img">
+                <h2>grant location access</h2>
+                <p>allow access to get weather information</p>
+                <div class="grant-btn">GRANT ACCESS</div>
+            </div>
+    
+            <!-- loading container -->
+            <div class="loading-container">
+                <img src="/assests/loading.gif" alt="">
+                <p>LOADING</p>
+            </div>
+
+            <!-- network error container -->
+            <div class="network-container">
+                <p>Error: Failed to fetch</p>
+                <div class="retry-btn">RETRY</div>
+            </div>
+
+            <!-- search weather container -->
+            <div class="search-container">
+                <input type="text" placeholder="Search for city...">
+                <img src="/assests/search.png" alt="">
+            </div>
+    
+            <!-- weather conatiner -->
+            <div class="weather-container active-block">
+    
+                <div class="user-location">
+                    <div class="location-name">Gangānagar</div>
+                    <img src="/assests/india.png" alt="">
+                </div>
+    
+                <div class="weather-condition">
+                    <p>clouds</p>
+                    <img src="/assests/smokyCloud.png" alt="">
+                    <div class="temp">20.97 °C</div>
+                </div>
+    
+    
+                <div class="weather-info">
+                    
+                    <div class="weather-info-card">
+                        <img src="/assests/wind.png" alt="">
+                        <p>WINDSPEED</p>
+                        <div class="windspeed-value">2.19m/s</div>
+                    </div>
+                    
+                    <div class="weather-info-card">
+                        <img src="/assests/humidity.png" alt="">
+                        <p>HUMUDITY</p>
+                        <div class="humidity-value">22%</div>
+                    </div>
+                    
+                    <div class="weather-info-card">
+                        <img src="/assests/cloud.png" alt="">
+                        <p>CLOUDS</p>
+                        <div class="clouds-value">67%</div>
+                    </div>
+    
+    
+                </div>
+            </div>
+    
+    
+            <!-- error container -->
+            <div class="error-container">
+                <img src="/assests/not-found.png" alt="">
+                <p>city not found</p>
+            </div>
+
+        </div>
+
+
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

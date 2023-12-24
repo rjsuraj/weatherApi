@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+}
+
+#wrapper{
+    min-width: 100%;
+    min-height: 100%;
+    background: linear-gradient(160deg, rgb(17, 45, 78) 0%, rgb(63, 114, 175) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.grant-permission-container,.loading-container,.weather-container,.search-container,.error-container,.network-container{
+    display: none;
+}
+
+.active-block{
+    display: block;
+}
+
+.active-flex{
+    display: flex;
+}
+
+h1{
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+    letter-spacing: 1.75px;
+}
+
+img{
+    width: 50px;
+}
+
+#inner-wrapper{
+    width: 650px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* switching tab */
+
+.switching-tab-container{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.current-tab{
+    background-color: #7E93AF;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.weather-tab,.search-tab{
+    text-transform: capitalize;
+    font-size: 14px;
+    letter-spacing: 1.75px;
+    cursor: pointer;
+}
+
+/* weather container start here */
+
+.weather-container{
+    width: 100%;
+}
+
+.user-location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.location-name{
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.user-location img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+.weather-condition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-top: 17px;
+}
+
+.weather-condition p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.weather-condition img{
+    width: 90px;
+    height: 90px;
+}
+
+.weather-condition .temp{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.weather-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-info-card{
+    background-color: #859DBD;
+    display: flex;
+    width: 31%;
+    font-size: 1.5rem;
+    font-weight: 200;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 15px 0;
+}
+
+/* permission container (flex)*/
+
+.grant-permission-container{
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.grant-permission-container img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.grant-permission-container h2{
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.grant-permission-container p{
+    font-size: 0.9rem;
+    font-weight: 200;
+    opacity: 0.9;
+    text-transform: capitalize;
+}
+
+.grant-btn{
+    font-size: 0.85rem;
+    font-weight: 400;
+    background-color: #3F72AF;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* search container (flex) */
+
+.search-container{
+    width: 86%;
+    align-items: center;
+    gap: 9px;
+}
+
+input[type="text"]{
+    all: unset;
+    width: 90%;
+    background-color: rgba(219, 226, 239, 0.5);
+    border: none;
+    padding: 0 18px;
+    height: 2.6rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+input[type="text"]::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type="text"]:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.search-container img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: #3F72AF;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* error container */
+.error-container img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    transform: translateY(-20px);
+}
+
+.error-container p{
+    text-align: center;
+}
+
+/* loading container */
+
+.loading-container img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.loading-container p{
+    text-align: center;
+}
+
+/* network error container */
+
+.network-container{
+    text-align: center;
+}
+
+.network-container .retry-btn{
+    background-color: #3F72AF;
+    width: 100px;
+    margin: 13px auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
