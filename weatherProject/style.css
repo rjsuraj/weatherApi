@@ -271,3 +271,114 @@ input[type="text"]:focus {
     font-size: 0.8rem;
     cursor: pointer;
 }
+
+
+/* adding media query */
+
+@media screen and (max-width: 650px){
+    #inner-wrapper{
+        width: 100%;
+        padding: 0 20px 30px 20px;
+        gap: 50px;
+    }
+
+    .weather-info{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .weather-info-card{
+        width: 80%;
+    }
+
+    .weather-condition img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .weather-condition .temp{
+        font-size: 2rem;
+    }
+
+    .weather-condition p{
+        font-size: 1.2rem;
+    }
+
+    .weather-condition{
+        margin-top: 10px;
+    }
+
+    .user-location img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .user-location{
+        gap: 5px;
+    }
+
+    .location-name{
+        font-size: 1.5rem;
+    }
+
+    .weather-tab,.search-tab{
+        font-size: 12px;
+    }
+
+    .switching-tab-container{
+        width: 100%;
+    }
+
+    .search-container{
+        width: 100%;
+    }
+
+    input[type="text"]{
+        width: 100%;
+    }
+
+    .search-container img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .grant-permission-container img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .grant-permission-container h2{
+        font-size: 1.5rem;
+    }
+
+    .grant-permission-container p{
+        font-size: 0.8rem;
+    }
+
+    .grant-btn{
+        font-size: 0.75rem;
+    }
+
+    .error-container img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .error-container p{
+        font-size: 0.9rem;
+    }
+
+    .loading-container img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .loading-container p{
+        font-size: 0.9rem;
+    }
+
+    .network-container .retry-btn{
+        font-size: 0.75rem;
+    }
+}
